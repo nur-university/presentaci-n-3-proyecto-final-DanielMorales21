@@ -1,0 +1,214 @@
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+.site-header {
+  background: #1435b9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+}
+
+.logo { 
+    color: #fff; 
+    font-size: 22px; 
+    font-weight: 700; 
+    margin: 0; 
+}
+.menu-toggle { 
+    display: none; 
+}
+.menu-icon { 
+    font-size: 24px; 
+    color: #fff; 
+    display: block; 
+    cursor: pointer; 
+}
+
+.nav-menu { 
+    display: none; 
+    flex-direction: column; 
+    background: #1435b9; 
+    position: absolute; 
+    left: 0; 
+    top: 64px; 
+    width: 100%; 
+}
+.menu-toggle:checked ~ .nav-menu { 
+    display: flex; 
+}
+.nav-menu ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; }
+
+.nav-menu li { 
+    padding: 12px 20px; 
+}
+.nav-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #00ffb3;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffb3;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a.active {
+  color: #00ffb3;
+}
+.project-detail { 
+    padding-top: 86px; 
+    padding-bottom: 40px; 
+}
+
+.banner img { 
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 6px; 
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 18px 16px;
+}
+
+.left h2 { 
+    margin: 6px 0 10px 0; 
+    color: #1435b9; 
+}
+.meta { 
+    color: #666; 
+    margin-bottom: 12px; 
+}
+
+.left h3 { 
+    margin-top: 14px; 
+    margin-bottom: 8px; 
+}
+.update { 
+    background: #f8f8f8; 
+    padding: 10px; 
+    border-radius: 6px; 
+    margin-bottom: 8px; 
+}
+
+.right .card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.goal { 
+    font-size: 1rem; 
+    color: #333; 
+    margin: 6px 0; 
+}
+.progress { 
+    background: #eee; 
+    height: 12px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin: 8px 0; 
+}
+.progress-bar { 
+    height: 100%; 
+    background: linear-gradient(90deg, #1435b9, #5aa2ff); 
+    color: #fff; text-align: center; 
+    font-size: 0.8rem; 
+    line-height: 12px; 
+}
+
+.actions .btn { 
+    display: block; 
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 8px; 
+}
+.btn { 
+    background: #1435b9; 
+    color: #fff; 
+    padding: 10px 12px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+.btn-outline { 
+    color: #1435b9; 
+    border: 2px solid #1435b9; 
+    padding: 8px 10px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    display: inline-block; 
+}
+
+.site-footer { 
+    padding: 14px 16px; 
+    text-align: center; 
+    color: #555; 
+    background: #fafafa; 
+}
+
+@media (min-width: 720px) {
+  .menu-icon, .menu-toggle { 
+    display: none; 
+}
+  .nav-menu { 
+    display: flex; 
+    position: static; 
+    flex-direction: row; 
+    background: transparent; 
+    gap: 26px; 
+    align-items: center; 
+}
+  .detail-grid { grid-template-columns: 1fr 360px; padding: 24px 32px; }
+}
+
+@media (min-width: 1024px) {
+  .site-header { 
+    padding: 12px 60px; 
+}
+  .logo { 
+    font-size: 26px; 
+}
+  .progress { 
+    height: 14px; 
+}
+  .progress-bar { 
+    font-size: 0.85rem; 
+}
+}

@@ -1,0 +1,287 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  box-sizing: border-box;
+}
+
+
+.site-header {
+  background: #1435b9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.left-section { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.menu-toggle { 
+    display: none; 
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #00ffb3;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #00ffb3;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-menu a.active {
+  color: #00ffb3;
+}
+
+
+.menu-toggle:checked ~ .nav-menu { 
+    display: flex; 
+}
+
+.nav-menu ul { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+.nav-menu li { 
+    padding: 12px 20px; 
+}
+.nav-menu a { 
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 17px; 
+}
+
+.user-login { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    color: #fff; 
+}
+.user-icon { 
+    font-size: 24px; 
+}
+
+.explore { 
+    padding-top: 86px; 
+    padding-bottom: 40px; 
+}
+
+.intro { 
+    padding: 20px; 
+    text-align: center; 
+}
+.intro h2 { 
+    color: #1435b9; 
+    margin: 6px 0; 
+}
+.intro p { 
+    margin: 0; 
+    color: #444; 
+}
+
+.search-filter {
+  padding: 18px 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input[type="search"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.search-box .btn {
+  background: #1435b9;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filters { 
+    display: grid; 
+    gap: 8px; 
+}
+.filter-item span { 
+    display: block; 
+    margin-bottom: 6px; 
+    color: #333; 
+    font-weight: 600; 
+}
+.filter-item select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.projects { 
+    padding: 0 16px 40px 16px; 
+}
+.projects h3 { 
+    margin: 8px 0 14px; 
+    color: #1435b9; 
+    text-align: left; 
+}
+
+.project-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body { 
+    padding: 12px; 
+}
+.card-body h4 { 
+    margin: 0 0 6px 0; 
+}
+.meta { 
+    color: #666; 
+    font-size: 0.95rem; 
+    margin-bottom: 8px; 
+}
+.excerpt { 
+    color: #444; 
+    margin-bottom: 10px; 
+}
+
+.card-actions { 
+    display: flex; 
+    justify-content: flex-end; 
+}
+.btn.small {
+  background: #1435b9;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.site-footer {
+  background: #f7f7f7;
+  padding: 14px 16px;
+  text-align: center;
+  color: #555;
+}
+
+@media (min-width: 520px) {
+  .search-filter { 
+    grid-template-columns: 1fr 320px; 
+    align-items: start; 
+    gap: 16px; 
+}
+}
+
+@media (min-width: 768px) {
+  .menu-icon,
+  .menu-toggle { 
+    display: none; 
+}
+
+  .nav-menu {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .nav-menu ul { 
+    display: flex; 
+    gap: 22px; 
+    align-items: center; 
+    margin: 0; 
+    padding: 0; 
+}
+  .nav-menu li { 
+    padding: 0; 
+}
+
+  .search-filter { 
+    grid-template-columns: 1fr 360px; 
+    padding: 22px 32px; 
+}
+  .projects { 
+    padding: 0 32px 48px; 
+}
+
+  .project-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 18px; 
+}
+}
+
+@media (min-width: 1024px) {
+  .site-header { padding: 12px 60px; }
+  .logo { font-size: 26px; }
+  .user-icon { font-size: 28px; }
+}

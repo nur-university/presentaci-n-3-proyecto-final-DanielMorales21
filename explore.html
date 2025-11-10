@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CROWD - Explorar Proyectos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/explore.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="left-section">
+      <h1 class="logo"><a href="index.html">CROWD</a></h1>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="explore.html">Explorar</a></li>
+        <li><a href="register.html">Registro</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-login">
+      <i class="fa-solid fa-circle-user user-icon"></i>
+      <span class="login-text"><a href="login.html">Login</a></span>
+    </div>
+  </header>
+
+  <main class="explore">
+    <section class="intro">
+      <h2>Explorar Proyectos</h2>
+      <p>Busca proyectos por nombre, categoría o creador. Filtra y ordena para encontrar lo que más te interese.</p>
+    </section>
+
+    <section class="search-filter">
+      <div class="search-box">
+        <input type="search" placeholder="Buscar proyectos, palabras clave o autores...">
+        <button class="btn">Buscar</button>
+      </div>
+
+      <div class="filters">
+        <label class="filter-item">
+          <span>Categoría</span>
+          <select>
+            <option>Todas</option>
+            <option>Tecnología</option>
+            <option>Arte</option>
+            <option>Social</option>
+            <option>Emprendimiento</option>
+          </select>
+        </label>
+
+        <label class="filter-item">
+          <span>Ordenar</span>
+          <select>
+            <option>Más recientes</option>
+            <option>Más apoyados</option>
+            <option>Próximo a vencer</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h3>Resultados</h3>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="https://via.placeholder.com/600x300" alt="Robot Comunitario">
+          <div class="card-body">
+            <h4>Robot Comunitario</h4>
+            <p class="meta">Por: Juan Pérez · Meta $5,000 · 62%</p>
+            <p class="excerpt">Robot educativo que apoya talleres comunitarios y escuelas rurales.</p>
+            <div class="card-actions">
+              <a href="project.html" class="btn small">Ver detalle</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="https://via.placeholder.com/600x300" alt="Huerto Urbano">
+          <div class="card-body">
+            <h4>Huerto Urbano</h4>
+            <p class="meta">Por: Ana Gómez · Meta $1,500 · 90%</p>
+            <p class="excerpt">Crear un huerto comunitario para educación ambiental.</p>
+            <div class="card-actions">
+              <a href="project.html" class="btn small">Ver detalle</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 CROWD</p>
+  </footer>
+
+</body>
+</html>

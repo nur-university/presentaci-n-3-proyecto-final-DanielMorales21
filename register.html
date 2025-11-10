@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CROWD - Registro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="left-section">
+      <h1 class="logo"><a href="index.html">CROWD</a></h1>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="explore.html">Explorar</a></li>
+        <li><a href="register.html">Registro</a></li>
+      </ul>
+    </nav>
+
+    <div class="user-login">
+      <i class="fa-solid fa-circle-user user-icon"></i>
+      <span class="login-text"><a href="login.html">Login</a></span>
+    </div>
+  </header>
+
+  <main class="register-page">
+    <section class="form-card">
+      <h2>Crear cuenta</h2>
+      <p>Rellena los datos para crear tu cuenta en CROWD (versión estática).</p>
+
+      <form class="form" novalidate>
+        <label>
+          Nombre completo
+          <input name="fullname" type="text" placeholder="Ej: María López" required>
+        </label>
+
+        <label>
+          Correo electrónico
+          <input name="email" type="email" placeholder="ejemplo@correo.com" required>
+        </label>
+
+        <label>
+          Contraseña
+          <input name="password" type="password" placeholder="Mínimo 6 caracteres" required>
+        </label>
+
+        <label>
+          Confirmar contraseña
+          <input name="password2" type="password" placeholder="Repite la contraseña" required>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Registrarse</button>
+          <a href="login.html" class="btn-outline">Ya tengo cuenta</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 CROWD</p>
+  </footer>
+
+</body>
+</html>
